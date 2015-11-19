@@ -23,6 +23,10 @@
     <%= f.label :defended %><br>
     <%= f.date_select :defended %>
   </div>
+  <div class="field">
+    <%= f.label :faculty %><br>
+    <%= f.select :faculty_id, Faculty.all.collect { |f| [f.name, f.id] }, {:include_blank => ""} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
