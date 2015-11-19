@@ -11,6 +11,13 @@
 </p>
 
 <p>
+  <strong>Author:</strong>
+  <%= if(@thesis.person)
+        link_to @thesis.person.try!(:username), @thesis.person
+      end %>
+</p>
+
+<p>
   <strong>Defended:</strong>
   <%= @thesis.defended %>
 </p>

@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Abstract</th>
+      <th>Author</th>
       <th>Defended</th>
       <th colspan="3"></th>
     </tr>
@@ -17,6 +18,9 @@
       <tr>
         <td><%= thesis.title %></td>
         <td><%= thesis.abstract %></td>
+        <td><%= if(thesis.person)
+                  link_to thesis.person.try!(:username), thesis.person
+                end %></td>
         <td><%= thesis.defended %></td>
         <td><%= link_to 'Show', thesis %></td>
         <td><%= link_to 'Edit', edit_thesis_path(thesis) %></td>
