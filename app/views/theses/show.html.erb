@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @thesis.title %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @thesis.abstract %>
+</p>
+
+<p>
+  <strong>Defended:</strong>
+  <%= @thesis.defended %>
+</p>
+
+<%= link_to 'Edit', edit_thesis_path(@thesis) %> |
+<%= link_to 'Back', theses_path %>
